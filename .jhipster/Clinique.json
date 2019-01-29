@@ -1,0 +1,91 @@
+{
+    "name": "Clinique",
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dirigeant",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "adresse",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "telephone",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "fax",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "horaireTravail",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "clinique",
+            "relationshipName": "medecin",
+            "otherEntityName": "medecin",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "medecin",
+            "otherEntityName": "medecin",
+            "otherEntityRelationshipName": "clinique"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "patient",
+            "otherEntityName": "patient",
+            "otherEntityRelationshipName": "clinique"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "visite",
+            "otherEntityName": "visite",
+            "otherEntityRelationshipName": "clinique"
+        }
+    ],
+    "changelogDate": "20190129123605",
+    "entityTableName": "clinique",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

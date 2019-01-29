@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="medecin">
+            <h2><span>Medecin</span> {{medecin.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Nom</span></dt>
+                <dd>
+                    <span>{{medecin.nom}}</span>
+                </dd>
+                <dt><span>Adresse</span></dt>
+                <dd>
+                    <span>{{medecin.adresse}}</span>
+                </dd>
+                <dt><span>Telephone</span></dt>
+                <dd>
+                    <span>{{medecin.telephone}}</span>
+                </dd>
+                <dt><span>Fax</span></dt>
+                <dd>
+                    <span>{{medecin.fax}}</span>
+                </dd>
+                <dt><span>Email</span></dt>
+                <dd>
+                    <span>{{medecin.email}}</span>
+                </dd>
+                <dt><span>Etat</span></dt>
+                <dd>
+                    <span>{{medecin.etat}}</span>
+                </dd>
+                <dt><span>Specialite</span></dt>
+                <dd>
+                    <div *ngIf="medecin.specialite">
+                        <a [routerLink]="['/specialite', medecin.specialite?.id, 'view']">{{medecin.specialite?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span>Clinique</span></dt>
+                <dd>
+                    <div *ngIf="medecin.clinique">
+                        <a [routerLink]="['/clinique', medecin.clinique?.id, 'view']">{{medecin.clinique?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/medecin', medecin.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+{
+    "name": "CompteRendu",
+    "fields": [
+        {
+            "fieldName": "dateCompteRendu",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "visite",
+            "otherEntityName": "visite",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "compteRendu"
+        }
+    ],
+    "changelogDate": "20190129123610",
+    "entityTableName": "compte_rendu",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
