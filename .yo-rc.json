@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "applicationType": "gateway",
+    "gitCompany": "",
+    "baseName": "GestionClinique",
+    "packageName": "dz.elit.clinique",
+    "packageFolder": "dz/elit/clinique",
+    "serverPort": 8080,
+    "serviceDiscoveryType": "eureka",
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.8.0",
+    "jwtSecretKey": "ZWNjYmYxYmUzMTBiMDQ0MDhmMjcyZTM1YmZmMTMyOWIxMmY1MzJiODc0OTZlNDNkZDhiYWMwZjZjNmE0ZjZjMGQ3MzM2NzdmZmNjY2QzODA5YWM1YmIxYjcwOGI1YjFiZjdlYzg3NzU3ZWE0ZmJhYzkzNmZmOGEwNTJmMTcyN2U=",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": []
+  },
+  "git-provider": "GitHub",
+  "git-company": "hayadi",
+  "repository-name": "GestionClinique"
+}
