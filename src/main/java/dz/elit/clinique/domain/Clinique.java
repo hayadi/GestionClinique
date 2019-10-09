@@ -61,10 +61,6 @@ public class Clinique implements Serializable {
 
     @OneToMany(mappedBy = "clinique")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    private Set<Medecin> medecins = new HashSet<>();
-
-    @OneToMany(mappedBy = "clinique")
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Patient> patients = new HashSet<>();
 
     @OneToMany(mappedBy = "clinique")
@@ -189,31 +185,6 @@ public class Clinique implements Serializable {
     public Clinique removeMedecin(Medecin medecin) {
         this.medecins.remove(medecin);
         medecin.getCliniques().remove(this);
-        return this;
-    }
-
-    public void setMedecins(Set<Medecin> medecins) {
-        this.medecins = medecins;
-    }
-
-    public Set<Medecin> getMedecins() {
-        return medecins;
-    }
-
-    public Clinique medecins(Set<Medecin> medecins) {
-        this.medecins = medecins;
-        return this;
-    }
-
-    public Clinique addMedecin(Medecin medecin) {
-        this.medecins.add(medecin);
-        medecin.setClinique(this);
-        return this;
-    }
-
-    public Clinique removeMedecin(Medecin medecin) {
-        this.medecins.remove(medecin);
-        medecin.setClinique(null);
         return this;
     }
 

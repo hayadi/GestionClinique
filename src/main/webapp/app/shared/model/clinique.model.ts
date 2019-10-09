@@ -12,7 +12,6 @@ export interface IClinique {
     email?: string;
     horaireTravail?: string;
     medecins?: IMedecin[];
-    medecins?: IMedecin[];
     patients?: IPatient[];
     visites?: IVisite[];
 }
@@ -27,7 +26,6 @@ export class Clinique implements IClinique {
         public fax?: string,
         public email?: string,
         public horaireTravail?: string,
-        public medecins?: IMedecin[],
         public medecins?: IMedecin[],
         public patients?: IPatient[],
         public visites?: IVisite[]

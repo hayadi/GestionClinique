@@ -36,13 +36,6 @@
             "otherEntityField": "id"
         },
         {
-            "relationshipType": "many-to-one",
-            "otherEntityName": "clinique",
-            "otherEntityRelationshipName": "medecin",
-            "relationshipName": "clinique",
-            "otherEntityField": "id"
-        },
-        {
             "relationshipType": "one-to-many",
             "otherEntityName": "visite",
             "otherEntityRelationshipName": "medecin",

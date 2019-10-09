@@ -62,12 +62,6 @@
         },
         {
             "relationshipType": "one-to-many",
-            "otherEntityName": "medecin",
-            "otherEntityRelationshipName": "clinique",
-            "relationshipName": "medecin"
-        },
-        {
-            "relationshipType": "one-to-many",
             "otherEntityName": "patient",
             "otherEntityRelationshipName": "clinique",
             "relationshipName": "patient"

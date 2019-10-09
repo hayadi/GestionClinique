@@ -50,10 +50,6 @@ public class Medecin implements Serializable {
     @JsonIgnoreProperties("medecins")
     private Specialite specialite;
 
-    @ManyToOne
-    @JsonIgnoreProperties("medecins")
-    private Clinique clinique;
-
     @OneToMany(mappedBy = "medecin")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Visite> visites = new HashSet<>();
@@ -161,19 +157,6 @@ public class Medecin implements Serializable {
 
     public void setSpecialite(Specialite specialite) {
         this.specialite = specialite;
-    }
-
-    public Clinique getClinique() {
-        return clinique;
-    }
-
-    public Medecin clinique(Clinique clinique) {
-        this.clinique = clinique;
-        return this;
-    }
-
-    public void setClinique(Clinique clinique) {
-        this.clinique = clinique;
     }
 
     public Set<Visite> getVisites() {

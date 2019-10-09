@@ -50,13 +50,6 @@
                         <option [ngValue]="specialiteOption.id === editForm.get('specialite').value?.id ? editForm.get('specialite').value : specialiteOption" *ngFor="let specialiteOption of specialites; trackBy: trackSpecialiteById">{{specialiteOption.id}}</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label class="form-control-label" for="field_clinique">Clinique</label>
-                    <select class="form-control" id="field_clinique" name="clinique" formControlName="clinique">
-                        <option [ngValue]="null"></option>
-                        <option [ngValue]="cliniqueOption.id === editForm.get('clinique').value?.id ? editForm.get('clinique').value : cliniqueOption" *ngFor="let cliniqueOption of cliniques; trackBy: trackCliniqueById">{{cliniqueOption.id}}</option>
-                    </select>
-                </div>
             </div>
             <div>
                 <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
