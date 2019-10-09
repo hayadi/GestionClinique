@@ -35,12 +35,6 @@
                         <a [routerLink]="['/specialite', medecin.specialite?.id, 'view']">{{medecin.specialite?.id}}</a>
                     </div>
                 </dd>
-                <dt><span>Clinique</span></dt>
-                <dd>
-                    <div *ngIf="medecin.clinique">
-                        <a [routerLink]="['/clinique', medecin.clinique?.id, 'view']">{{medecin.clinique?.id}}</a>
-                    </div>
-                </dd>
             </dl>
 
             <button type="submit"

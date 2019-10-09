@@ -33,8 +33,7 @@ export class MedecinUpdateComponent implements OnInit {
         fax: [],
         email: [],
         etat: [],
-        specialite: [],
-        clinique: []
+        specialite: []
     });
 
     constructor(
@@ -76,8 +75,7 @@ export class MedecinUpdateComponent implements OnInit {
             fax: medecin.fax,
             email: medecin.email,
             etat: medecin.etat,
-            specialite: medecin.specialite,
-            clinique: medecin.clinique
+            specialite: medecin.specialite
         });
     }
 
@@ -105,8 +103,7 @@ export class MedecinUpdateComponent implements OnInit {
             fax: this.editForm.get(['fax']).value,
             email: this.editForm.get(['email']).value,
             etat: this.editForm.get(['etat']).value,
-            specialite: this.editForm.get(['specialite']).value,
-            clinique: this.editForm.get(['clinique']).value
+            specialite: this.editForm.get(['specialite']).value
         };
     }
 
