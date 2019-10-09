@@ -55,7 +55,6 @@ relationship OneToOne {
 
 relationship ManyToOne {
 	Medecin to Specialite,
-    Medecin to Clinique,
     Patient to Clinique,
     Visite to Medecin,
     Visite to Clinique
